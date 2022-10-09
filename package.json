@@ -1,0 +1,14 @@
+{
+  "name": "practice_jquery",
+  "version": "1.0.0",
+  "description": "Practice JQuery",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hans",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.6.1"
+  }
+}

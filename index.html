@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQeury</title>
+
+    <script
+        src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <div class="index_div" id="index_div">로드중</div>
+    <p id="index_p">p임</p>
+
+    <script>
+        const 알림 = "문서가 로드됐음!"
+        $(document).ready(function() {
+            $("#index_div").text(알림)
+        })
+
+        const 할말 = "변수에 담겼어요~!"
+        $("#index_p").on("click", function() {
+            $("#index_p").text(할말)
+        })
+    </script>
+</body>
+</html>
