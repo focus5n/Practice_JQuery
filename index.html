@@ -14,6 +14,10 @@
 <body>
     <div class="index_div" id="index_div">로드중</div>
     <p id="index_p">p임</p>
+    <a href="" id="index_a">a임</a><br>
+    <button id="index_button">button임</button><br>
+    <button id="index_revive">부활임</button><br>
+    <button id="index_genius">존나 멋짐</button>
 
     <script>
         const 알림 = "문서가 로드됐음!"
@@ -24,6 +28,47 @@
         const 할말 = "변수에 담겼어요~!"
         $("#index_p").on("click", function() {
             $("#index_p").text(할말)
+        })
+
+        const 경고 = "이 링크는 작동하지 않음 ㅇㅇ"
+        $("#index_a").on("click", function() {
+            event.preventDefault()
+            $("#index_a").text(경고)
+        })
+
+        const 변함 = "마우스 올리면 내용 변함 ㅇㅇ"
+        $("#index_button").hover(() => {
+            $("#index_button").text(변함)
+        })
+
+        const 클릭 = "마우스로 클릭하면 색깔 변함 ㅇㅅㅇ"
+        $("#index_button").click(() => {
+            $("#index_button").text(클릭).css("color", "blue")
+        })
+
+        const 두번 = "더블클릭하면 크기 커짐 ㅇㅁㅇ"
+        $("#index_button").dblclick(() => {
+            $("#index_button").text(두번).css("font-size", "24pt").css("color", "green")
+        })
+
+        const 은신 = "사라진다아아아아~"
+        $("#index_button").mouseleave(() => {
+            $("#index_button").text(은신).hide("slow")
+        })
+
+        const 부활 = "살아났다아아아아~"
+        $("#index_revive").click(() => {
+            $("#index_button").text(부활).css("color", "yellow").show("slow")
+        })
+
+        const name = "천재"
+        const age = 2
+        function aa() {
+            return console.log("aa");
+        }
+
+        $("#index_genius").click(() => {
+            aa();
         })
     </script>
 </body>
